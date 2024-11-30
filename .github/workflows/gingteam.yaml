@@ -13,7 +13,7 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Delete old proxies file
         run: rm -f proxies.txt
@@ -24,4 +24,4 @@ jobs:
       - name: Scrapy run
         run: scrapy crawl proxy --nolog
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: stefanzweifel/git-auto-commit-action@v5
